@@ -1,0 +1,12 @@
+---
+version: '3'
+services:
+  zignaly:
+    image: 741506954419.dkr.ecr.ap-northeast-1.amazonaws.com:latest
+    restart: unless-stopped
+    container_name: zignaly
+    ports:
+      - "127.0.0.1:3030:3030"
+     environment:
+      - "ZIGNALY_PROXY_HOST=freqtrade-to-zignaly.nofomo.online"
+      - "ZIGNALY_PROXY_PORT=3030"
